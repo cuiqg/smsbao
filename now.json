@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "name": "cuiqg-sms",
+    "alias": ["sms"],
+    "env": {},
+    "builds": [
+        { "src": "*.html", "use": "@now/static"},
+        { "src": "*.php", "use": "@now/php" }
+    ],
+    "routes": [
+        { "src": "/me", "dest": "https://cuiqg.cc" }
+    ],
+    "regions": ["hkg1", "hnd1"]
+}
