@@ -8,7 +8,6 @@
         { "src": "*.php", "use": "@now/php" }
     ],
     "routes": [
-        { "src": "/me", "dest": "https://cuiqg.cc" }
     ],
     "regions": ["all"],
     "public": false,

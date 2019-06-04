@@ -58,13 +58,13 @@ if(empty( $params)) {
     $params = [
         'u' => $params['u'],
         'p' => md5( $params['p']),
-        'm' => $params['m'],
+        'm' => substr( $params['m'], -11, 11),
         'c' => $params['c'],
     ];
 
-    $url = 'https://api.smsbao.com/sms'.'?'. http_build_query($params);
-    $res = file_get_contents($url);
+    $url = 'https://api.smsbao.com/sms';
 
+    $res = getRequest($url, $params);
 
     $statusStr = array(
         "0" => "短信发送成功",
