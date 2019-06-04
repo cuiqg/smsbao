@@ -1,9 +1,9 @@
 <?php
 include_once __DIR__ . DIRECTORY_SEPARATOR . 'helper.php';
 
-$params = $_GET;
+$request = $_GET;
 
-if(empty( $params)) {
+if(empty( $request)) {
 
     outJson([
         'code' => -1,
@@ -19,7 +19,7 @@ if(empty( $params)) {
     ]);
 } else {
 
-    if(!isset($params['u']) || empty($params['u'])) {
+    if(!isset($request['u']) || empty($request['u'])) {
         outJson([
             'code' => -1,
             'message' => '缺少用户名',
@@ -28,7 +28,7 @@ if(empty( $params)) {
         ]);
     }
 
-    if(!isset($params['p']) || empty($params['p'])) {
+    if(!isset($request['p']) || empty($request['p'])) {
         outJson([
             'code' => -1,
             'message' => '缺少密码',
@@ -37,7 +37,7 @@ if(empty( $params)) {
         ]);
     }
 
-    if(!isset($params['m']) || empty($params['m'])) {
+    if(!isset($request['m']) || empty($request['m'])) {
         outJson([
             'code' => -1,
             'message' => '缺少手机号',
@@ -46,7 +46,7 @@ if(empty( $params)) {
         ]);
     }
 
-    if(!isset($params['c']) || empty($params['c'])) {
+    if(!isset($request['c']) || empty($request['c'])) {
         outJson([
             'code' => -1,
             'message' => '缺少短信内容',
@@ -56,11 +56,15 @@ if(empty( $params)) {
     }
 
     $params = [
-        'u' => $params['u'],
-        'p' => md5( $params['p']),
-        'm' => substr( $params['m'], -11, 11),
-        'c' => $params['c'],
+        'u' => $request['u'],
+        'p' => md5( $request['p']),
+        'm' => substr( $request['m'], -11, 11),
+        'c' => $request['c'],
     ];
+
+    if(isset($request['sign']) || !empty($request['sign'])) {
+        $params['c'] .= "【{$params['sign']}】";
+    }
 
     $url = 'https://api.smsbao.com/sms';
 
