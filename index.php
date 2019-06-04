@@ -62,9 +62,9 @@ if(empty( $request)) {
         'c' => $request['c'],
     ];
 
-    if(isset($request['sign']) || !empty($request['sign'])) {
-        $params['c'] .= "【{$params['sign']}】";
-    }
+  
+    $params['c'] .= "【CUIQG-NAS】";
+    
 
     $url = 'https://api.smsbao.com/sms';
 
