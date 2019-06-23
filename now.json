@@ -9,7 +9,7 @@
     ],
     "routes": [
     ],
-    "regions": ["all"],
+    "regions": ["hkg1","hnd1"],
     "public": false,
     "github": {
         "enabled": true,
