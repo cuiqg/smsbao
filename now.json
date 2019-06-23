@@ -1,7 +1,7 @@
 {
     "version": 2,
     "name": "smsbao",
-    "alias": ["smsbao.cuiqg.cc"],
+    "alias": ["smsbao.cuiqg.cc","smsbao.now.sh"],
     "env": {},
     "builds": [
         { "src": "*.html", "use": "@now/static"},
