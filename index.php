@@ -82,7 +82,7 @@ if(empty( $request)) {
         "50" => "内容含有敏感词"
         );
 
-    if($res > 0) {
+    if($res != 0) {
         outJson([
             'code'    => -1,
             'message' => $statusStr[$res],
