@@ -12,7 +12,6 @@
     "regions": ["all"],
     "public": true,
     "github": {
-        "enabled": true,
         "autoAlias": false
     }
 }
