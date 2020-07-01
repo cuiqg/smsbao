@@ -8,7 +8,6 @@
         { "src": "*.php", "use": "@now/php" }
     ],
     "routes": [],
-    "regions": ["all"],
     "public": true,
     "github": {
         "enabled": true,
