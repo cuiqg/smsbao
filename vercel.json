@@ -3,12 +3,12 @@
     "name": "smsbao",
     "alias": ["smsbao.cuiqg.me"],
     "functions": {
-        "app/*.php": {
+        "api/*.php": {
             "runtime": "vercel-php@0.3.0"
         }
     },
     "routes": [
-        {"src":"/(.*)","desc":"/app/index.php"}
+        {"src":"/(.*)","desc":"/api/index.php"}
     ],
     "github": {
         "enabled": true,
