@@ -2,11 +2,11 @@
     "version": 2,
     "name": "smsbao",
     "alias": ["smsbao.cuiqg.me"],
-    "functions": [
+    "functions": {
         "app/*.php": {
             "runtime": "vercel-php@0.3.0"
         }
-    ],
+    },
     "routes": [
         {"src":"/(.*)","desc":"/app/index.php"}
     ],
