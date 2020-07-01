@@ -8,7 +8,7 @@
         }
     },
     "routes": [
-        {"src":"/(.*)","desc":"/api/index.php"}
+        {"src":"/(.*)","dest":"/api/index.php"}
     ],
     "github": {
         "enabled": true,
