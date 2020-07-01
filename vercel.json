@@ -4,12 +4,12 @@
     "alias": ["smsbao.cuiqg.me"],
     "env": {},
     "functions": [
-        "*.php": {
+        "api/*.php": {
             "runtime": "vercel-php@0.3.0"
         }
     ],
     "routes": [
-        {"src":"/.*","desc":"index.php"}
+        {"src":"/(.*)","desc":"/api/index.php"}
     ],
     "public": true,
     "github": {
