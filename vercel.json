@@ -1,13 +1,16 @@
 {
     "version": 2,
     "name": "smsbao",
-    "alias": ["smsbao.now.sh"],
+    "alias": ["smsbao.cuiqg.me"],
     "env": {},
-    "builds": [
-        { "src": "*.html", "use": "@now/static" },
-        { "src": "*.php", "use": "@now/php" }
+    "functions": [
+        "*.php": {
+            "runtime": "vercel-php@0.3.0"
+        }
     ],
-    "routes": [],
+    "routes": [
+        {"src":"/.*","desc":"index.php"}
+    ],
     "public": true,
     "github": {
         "enabled": true,
