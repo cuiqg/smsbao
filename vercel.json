@@ -1,7 +1,7 @@
 {
     "version": 2,
     "name": "smsbao",
-    "alias": ["smsbao.cuiqg.me"],
+    "alias": ["smsbao"],
     "functions": {
         "api/*.php": {
             "runtime": "vercel-php@0.3.0"
